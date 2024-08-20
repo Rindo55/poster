@@ -52,7 +52,7 @@ def handle_input(client, message: Message):
         if message.photo:
             # Save the photo
             file_path = f"img/{user_id}_image.jpg"
-            message.download(file_path)
+            message.photo.download(file_path)
             
             # Generate wanted poster
             first_name = user_data[user_id]["first_name"]
