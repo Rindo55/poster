@@ -51,8 +51,8 @@ def handle_input(client, message: Message):
         # Handle image upload
         if message.photo:
             # Save the photo
-            file_path = f"temp/{user_id}_image.jpg"
-            message.photo.download(file_path)
+            file_path = f"img/{user_id}_image.jpg"
+            message.download(file_path)
             
             # Generate wanted poster
             first_name = user_data[user_id]["first_name"]
